@@ -1,0 +1,465 @@
+{
+  "sales": [
+    {
+      "period": "2026-01",
+      "clientCode": "09365",
+      "clientName": "Accenture S.R.L.",
+      "productCode": "IA0022",
+      "historicalName": "Refill Box Ofisnack Sala de Reuniones x 20 Bocaditos",
+      "quantity": 1
+    },
+    {
+      "period": "2026-01",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0008",
+      "historicalName": "Box Ofisnack After Office x 12 productos",
+      "quantity": 6
+    },
+    {
+      "period": "2026-01",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0019",
+      "historicalName": "Box Ofisnack Cine en Casa x 20 productos",
+      "quantity": 4
+    },
+    {
+      "period": "2026-01",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0007",
+      "historicalName": "Box Ofisnack Desayuno x 13 productos",
+      "quantity": 1
+    },
+    {
+      "period": "2026-01",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0012",
+      "historicalName": "Box Ofisnack Wellness x 12 productos",
+      "quantity": 1
+    },
+    {
+      "period": "2026-02",
+      "clientCode": "09082",
+      "clientName": "Corporación Afiliada Del Sur S.A.",
+      "productCode": "IA0021",
+      "historicalName": "Box Ofisnack Sweets x 120 Caramelos",
+      "quantity": 2
+    },
+    {
+      "period": "2026-02",
+      "clientCode": "44876",
+      "clientName": "Dutto, Marcos",
+      "productCode": "IA0024",
+      "historicalName": "Box Ofisnack Special Edition Kids x 20 Snacks",
+      "quantity": 1
+    },
+    {
+      "period": "2026-02",
+      "clientCode": "43996",
+      "clientName": "Mediterranean Shipping Company S.A.",
+      "productCode": "IA0003",
+      "historicalName": "Box Ofisnack Special Edition Cumpleaños x 15 snack",
+      "quantity": 1
+    },
+    {
+      "period": "2026-02",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0008",
+      "historicalName": "Box Ofisnack After Office x 12 productos",
+      "quantity": 4
+    },
+    {
+      "period": "2026-02",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0019",
+      "historicalName": "Box Ofisnack Cine en Casa x 20 productos",
+      "quantity": 2
+    },
+    {
+      "period": "2026-03",
+      "clientCode": "45420",
+      "clientName": "Carena , Alberto",
+      "productCode": "IA0011",
+      "historicalName": "Box Ofisnack All Stars x 25 productos",
+      "quantity": 1
+    },
+    {
+      "period": "2026-03",
+      "clientCode": "36964",
+      "clientName": "Equanet S.A.",
+      "productCode": "IA0012",
+      "historicalName": "Box Ofisnack Wellness x 12 productos",
+      "quantity": 35
+    },
+    {
+      "period": "2026-03",
+      "clientCode": "13222",
+      "clientName": "First Corporate Finance Advisors S.A.",
+      "productCode": "IA0022",
+      "historicalName": "Refill Box Ofisnack Sala de Reuniones x 20 Bocaditos",
+      "quantity": 1
+    },
+    {
+      "period": "2026-03",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0008",
+      "historicalName": "Box Ofisnack After Office x 12 productos",
+      "quantity": 3
+    },
+    {
+      "period": "2026-03",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0019",
+      "historicalName": "Box Ofisnack Cine en Casa x 20 productos",
+      "quantity": 7
+    },
+    {
+      "period": "2026-03",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0007",
+      "historicalName": "Box Ofisnack Desayuno x 13 productos",
+      "quantity": 1
+    },
+    {
+      "period": "2026-03",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0012",
+      "historicalName": "Box Ofisnack Wellness x 12 productos",
+      "quantity": 4
+    },
+    {
+      "period": "2026-04",
+      "clientCode": "36965",
+      "clientName": "ACS Soluciones S.A.",
+      "productCode": "IA0012",
+      "historicalName": "Box Ofisnack Wellness x 12 productos",
+      "quantity": 79
+    },
+    {
+      "period": "2026-04",
+      "clientCode": "33375",
+      "clientName": "Delegacion de Asociaciones Israelitas Argentinas",
+      "productCode": "IA0001",
+      "historicalName": "Box Ofisnack Special Kids Edition x 50 Snacks",
+      "quantity": 1
+    },
+    {
+      "period": "2026-04",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0008",
+      "historicalName": "Box Ofisnack After Office x 12 productos",
+      "quantity": 4
+    },
+    {
+      "period": "2026-04",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0019",
+      "historicalName": "Box Ofisnack Cine en Casa x 20 productos",
+      "quantity": 11
+    },
+    {
+      "period": "2026-04",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0007",
+      "historicalName": "Box Ofisnack Desayuno x 13 productos",
+      "quantity": 1
+    },
+    {
+      "period": "2026-04",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0012",
+      "historicalName": "Box Ofisnack Wellness x 12 productos",
+      "quantity": 1
+    },
+    {
+      "period": "2026-04",
+      "clientCode": "41636",
+      "clientName": "Vizrt South America S.A.",
+      "productCode": "IA0011",
+      "historicalName": "Box Ofisnack All Stars x 30 productos",
+      "quantity": 1
+    },
+    {
+      "period": "2026-05",
+      "clientCode": "41692",
+      "clientName": "Ammaturo , Daniela",
+      "productCode": "IA0024",
+      "historicalName": "Box Ofisnack Special Edition Kids x 20 Snacks",
+      "quantity": 1
+    },
+    {
+      "period": "2026-05",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0008",
+      "historicalName": "Box Ofisnack After Office x 12 productos",
+      "quantity": 3
+    },
+    {
+      "period": "2026-05",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0019",
+      "historicalName": "Box Ofisnack Cine en Casa x 20 productos",
+      "quantity": 11
+    },
+    {
+      "period": "2026-05",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0007",
+      "historicalName": "Box Ofisnack Desayuno x 13 productos",
+      "quantity": 1
+    },
+    {
+      "period": "2026-05",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0012",
+      "historicalName": "Box Ofisnack Wellness x 12 productos",
+      "quantity": 1
+    },
+    {
+      "period": "2026-06",
+      "clientCode": "42402",
+      "clientName": "Beone Medicines Argentina S.R.L.",
+      "productCode": "IA0022",
+      "historicalName": "Refill Box Ofisnack Sala de Reuniones x 20 Bocaditos",
+      "quantity": 1
+    },
+    {
+      "period": "2026-06",
+      "clientCode": "36289",
+      "clientName": "Media Monks Bs As SRL",
+      "productCode": "IA0011",
+      "historicalName": "Box Ofisnack All Stars x 30 productos",
+      "quantity": 2
+    },
+    {
+      "period": "2026-06",
+      "clientCode": "43996",
+      "clientName": "Mediterranean Shipping Company S.A.",
+      "productCode": "IA0035",
+      "historicalName": "Box Ofisnack Special Edition Sorpresa Fit x 12 unidades",
+      "quantity": 1
+    },
+    {
+      "period": "2026-06",
+      "clientCode": "43996",
+      "clientName": "Mediterranean Shipping Company S.A.",
+      "productCode": "IA0034",
+      "historicalName": "Box Ofisnack Special Edition Sorpresa x 12 unidades",
+      "quantity": 1
+    },
+    {
+      "period": "2026-06",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0008",
+      "historicalName": "Box Ofisnack After Office x 12 productos",
+      "quantity": 1
+    },
+    {
+      "period": "2026-06",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0019",
+      "historicalName": "Box Ofisnack Cine en Casa x 20 productos",
+      "quantity": 5
+    },
+    {
+      "period": "2026-06",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0007",
+      "historicalName": "Box Ofisnack Desayuno x 13 productos",
+      "quantity": 2
+    },
+    {
+      "period": "2026-07",
+      "clientCode": "36289",
+      "clientName": "Media Monks Bs As SRL",
+      "productCode": "IA0001",
+      "historicalName": "Box Ofisnack Special Kids Edition x 50 Snacks",
+      "quantity": 5
+    },
+    {
+      "period": "2026-07",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0008",
+      "historicalName": "Box Ofisnack After Office x 12 productos",
+      "quantity": 1
+    },
+    {
+      "period": "2026-07",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0019",
+      "historicalName": "Box Ofisnack Cine en Casa x 20 productos",
+      "quantity": 9
+    },
+    {
+      "period": "2026-07",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0007",
+      "historicalName": "Box Ofisnack Desayuno x 13 productos",
+      "quantity": 2
+    },
+    {
+      "period": "2026-08",
+      "clientCode": "42402",
+      "clientName": "Beone Medicines Argentina S.R.L.",
+      "productCode": "IA0020",
+      "historicalName": "Box Ofisnack Sala de Reuniones x 20 Bocaditos",
+      "quantity": 1
+    },
+    {
+      "period": "2026-08",
+      "clientCode": "43996",
+      "clientName": "Mediterranean Shipping Company S.A.",
+      "productCode": "IA0035",
+      "historicalName": "Box Ofisnack Special Edition Sorpresa Fit x 12 unidades",
+      "quantity": -1
+    },
+    {
+      "period": "2026-08",
+      "clientCode": "43996",
+      "clientName": "Mediterranean Shipping Company S.A.",
+      "productCode": "IA0034",
+      "historicalName": "Box Ofisnack Special Edition Sorpresa x 12 unidades",
+      "quantity": -1
+    },
+    {
+      "period": "2026-08",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0008",
+      "historicalName": "Box Ofisnack After Office x 12 productos",
+      "quantity": 3
+    },
+    {
+      "period": "2026-08",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0019",
+      "historicalName": "Box Ofisnack Cine en Casa x 20 productos",
+      "quantity": 5
+    },
+    {
+      "period": "2026-08",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0012",
+      "historicalName": "Box Ofisnack Wellness x 12 productos",
+      "quantity": 2
+    }
+  ],
+  "catalog": [
+    {
+      "code": "IA0008",
+      "name": "Box Ofisnack After Office x 12 productos",
+      "status": "Activo"
+    },
+    {
+      "code": "IA0011",
+      "name": "Box Ofisnack All Stars x 30 productos",
+      "status": "Activo"
+    },
+    {
+      "code": "IA0019",
+      "name": "Box Ofisnack Cine en Casa x 20 productos",
+      "status": "Activo"
+    },
+    {
+      "code": "IA0007",
+      "name": "Box Ofisnack Desayuno x 13 productos",
+      "status": "Activo"
+    },
+    {
+      "code": "IA0006",
+      "name": "Box Ofisnack Fit x 12 productos",
+      "status": "Activo"
+    },
+    {
+      "code": "IA0020",
+      "name": "Box Ofisnack Sala de Reuniones x 20 Bocaditos",
+      "status": "Activo"
+    },
+    {
+      "code": "IA0003",
+      "name": "Box Ofisnack Special Edition Cumpleaños x 15 snack",
+      "status": "Activo"
+    },
+    {
+      "code": "IA0001",
+      "name": "Box Ofisnack Special Kids Edition x 50 Snacks",
+      "status": "Activo"
+    },
+    {
+      "code": "IA0024",
+      "name": "Box Ofisnack Special Edition Kids x 20 Snacks",
+      "status": "Activo"
+    },
+    {
+      "code": "IA0036",
+      "name": "Box Ofisnack Special Edition Picada x 12 unidades",
+      "status": "Activo"
+    },
+    {
+      "code": "IA0035",
+      "name": "Box Ofisnack Special Edition Sorpresa Fit x 12 unidades",
+      "status": "Activo"
+    },
+    {
+      "code": "IA0034",
+      "name": "Box Ofisnack Special Edition Sorpresa x 12 unidades",
+      "status": "Activo"
+    },
+    {
+      "code": "IA0002",
+      "name": "Box Ofisnack Special Love Edition x 12 Snacks",
+      "status": "Activo"
+    },
+    {
+      "code": "IA0021",
+      "name": "Box Ofisnack Sweets x 120 Caramelos",
+      "status": "Activo"
+    },
+    {
+      "code": "IA0012",
+      "name": "Box Ofisnack Wellness x 12 productos",
+      "status": "Activo"
+    },
+    {
+      "code": "IA0022",
+      "name": "Refill Box Ofisnack Sala de Reuniones x 20 Bocaditos",
+      "status": "Activo"
+    },
+    {
+      "code": "IA0023",
+      "name": "Refill Box Ofisnack Sweets x 120 Caramelos",
+      "status": "Activo"
+    }
+  ],
+  "config": {
+    "fechaActualizacion": "2026-08-24",
+    "ultimoMesCerrado": "2026-07",
+    "versionEsquema": 1
+  },
+  "generatedAt": "2026-08-26T13:15:06.381Z"
+}

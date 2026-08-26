@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dashboard ejecutivo de ventas Special Edition Boxes">
+  <title>Special Edition Boxes · Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260820-6">
+  <link rel="stylesheet" href="assets/css/logo.css?v=20260820-6">
+  <link rel="stylesheet" href="assets/css/clients.css?v=20260820-6">
+  <link rel="stylesheet" href="assets/css/theme-ofisnack.css?v=20260820-6">
+  <link rel="stylesheet" href="assets/css/portfolio.css?v=20260820-2">
+  <link rel="stylesheet" href="assets/css/opportunities.css?v=20260824-1">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Ofisnack dashboard">
+        <img class="brand-logo" src="assets/images/ofisnack-logo.png" alt="Ofisnack · Tu break saludable">
+      </a>
+      <nav aria-label="Navegación principal">
+        <button class="nav-item active" data-view="home"><span>⌂</span> Inicio</button>
+        <button class="nav-item" data-view="clients"><span>◎</span> Clientes</button>
+        <button class="nav-item" data-view="portfolio"><span>◇</span> Portfolio</button>
+        <span class="nav-label">Próximamente</span>
+        <button class="nav-item" data-view="opportunities"><span>↗</span> Oportunidades</button>
+      </nav>
+      <div class="sidebar-foot"><span class="status-dot"></span><span>Datos reales<br><small id="dataSourceNote">Cargando dataset…</small></span></div>
+    </aside>
+
+    <main id="home">
+      <header class="topbar">
+        <div><p class="eyebrow">VENTAS · SPECIAL EDITION</p><h1 id="pageTitle">Vista ejecutiva</h1><p id="pageSubtitle" class="subtitle">Una lectura clara del desempeño comercial de los boxes.</p></div>
+        <div class="data-badge"><span class="status-dot"></span><span>Fuente consolidada<small id="dataRangeNote">Cargando períodos…</small></span></div>
+      </header>
+
+      <section class="filters panel" aria-label="Filtros del dashboard">
+        <div class="filter-heading"><span>Filtros</span><button id="clearFilters" type="button">Restablecer</button></div>
+        <label>Año<select id="yearFilter"></select></label>
+        <label>Período<select id="monthFilter"></select></label>
+        <label>Cliente<select id="clientFilter"></select></label>
+        <label>Box<select id="productFilter"></select></label>
+      </section>
+
+      <section id="homeView" class="view active">
+      <section class="kpi-grid" aria-label="Indicadores principales">
+        <article class="kpi-card accent"><span class="kpi-label">Boxes vendidos</span><strong id="kpiUnits">—</strong><small>Unidades netas · NC descontadas</small></article>
+        <article class="kpi-card"><span class="kpi-label">Clientes compradores</span><strong id="kpiClients">—</strong><small>Clientes únicos con compra neta</small></article>
+        <article class="kpi-card"><span class="kpi-label">Portfolio vendido</span><strong id="kpiPortfolio">—</strong><small>Códigos con unidades netas positivas</small></article>
+        <article class="kpi-card"><span class="kpi-label">Clientes recurrentes</span><strong id="kpiRecurring">—</strong><small>Compraron en más de un mes</small></article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel chart-panel wide">
+          <div class="panel-head"><div><p class="eyebrow">TENDENCIA</p><h2>Evolución mensual</h2></div><div class="legend"><i></i> Unidades netas</div></div>
+          <div id="monthlyChart" class="monthly-chart" role="img" aria-label="Evolución mensual de unidades vendidas"></div>
+        </article>
+        <article class="panel concentration-card">
+          <div><p class="eyebrow">CONCENTRACIÓN</p><h2>Dependencia comercial</h2></div>
+          <div id="concentrationGauge" class="gauge"><div><strong id="top3Share">—</strong><span>del total</span></div></div>
+          <p id="concentrationText" class="insight"></p>
+        </article>
+        <article class="panel rank-panel">
+          <div class="panel-head"><div><p class="eyebrow">PORTFOLIO</p><h2>Top boxes</h2></div><span class="muted">por unidades</span></div>
+          <div id="productRanking" class="ranking"></div>
+        </article>
+        <article class="panel rank-panel">
+          <div class="panel-head"><div><p class="eyebrow">CLIENTES</p><h2>Top compradores</h2></div><span class="muted">por unidades</span></div>
+          <div id="clientRanking" class="ranking"></div>
+        </article>
+        <article class="panel recurrence-panel">
+          <div><p class="eyebrow">FIDELIDAD</p><h2>Recurrencia</h2></div>
+          <div id="recurrenceChart" class="recurrence-chart"></div>
+          <p class="insight">La recurrencia considera meses distintos con compra neta positiva.</p>
+        </article>
+      </section>
+
+      <section class="panel detail-panel">
+        <div class="panel-head"><div><p class="eyebrow">TRAZABILIDAD</p><h2>Detalle de movimientos</h2></div><span id="rowCount" class="count-pill"></span></div>
+        <div class="table-wrap"><table><thead><tr>
+          <th><button data-sort="clientCode">Cliente</button></th><th><button data-sort="clientName">Nombre del cliente</button></th><th><button data-sort="productCode">Código</button></th><th><button data-sort="currentName">Nombre vigente del box</button></th><th class="numeric"><button data-sort="quantity">Cantidad</button></th>
+        </tr></thead><tbody id="detailBody"></tbody></table></div>
+        <div id="emptyState" class="empty-state" hidden>No hay movimientos para esta combinación de filtros.</div>
+      </section>
+      </section>
+
+      <section id="clientsView" class="view">
+        <section class="kpi-grid" aria-label="Indicadores de clientes">
+          <article class="kpi-card accent"><span class="kpi-label">Clientes únicos</span><strong id="clientKpiUnique">—</strong><small>Con unidades netas positivas</small></article>
+          <article class="kpi-card"><span class="kpi-label">Clientes recurrentes</span><strong id="clientKpiRecurring">—</strong><small>Compra neta positiva en más de un mes</small></article>
+          <article class="kpi-card"><span class="kpi-label">Unidades netas</span><strong id="clientKpiUnits">—</strong><small>Notas de crédito descontadas</small></article>
+          <article class="kpi-card"><span class="kpi-label">Promedio por cliente</span><strong id="clientKpiAverage">—</strong><small>Unidades netas / clientes únicos</small></article>
+        </section>
+        <section class="clients-grid">
+          <article class="panel clients-ranking-panel"><div class="panel-head"><div><p class="eyebrow">RELEVANCIA</p><h2>Ranking de clientes</h2></div><span class="muted">unidades netas</span></div><div id="clientsMainRanking" class="ranking"></div></article>
+          <article class="panel distribution-panel"><div><p class="eyebrow">FRECUENCIA</p><h2>Distribución por recurrencia</h2></div><div id="clientDistribution" class="distribution-bars"></div><p class="insight">Recurrente: 3+ meses · Ocasional: 2 meses · Compra única: 1 mes.</p></article>
+        </section>
+        <section class="panel detail-panel client-list-panel">
+          <div class="panel-head"><div><p class="eyebrow">CARTERA</p><h2>Clientes</h2></div><span id="clientTableCount" class="count-pill"></span></div>
+          <div class="table-wrap"><table class="client-table"><thead><tr><th><button data-client-sort="clientName">Cliente</button></th><th class="numeric"><button data-client-sort="net">Unidades netas</button></th><th class="numeric"><button data-client-sort="share">Participación</button></th><th class="numeric"><button data-client-sort="months">Meses</button></th><th class="numeric"><button data-client-sort="products">Boxes</button></th><th><button data-client-sort="lastPeriod">Última compra</button></th><th><button data-client-sort="recurrence">Recurrencia</button></th><th><span class="sr-only">Ver detalle</span></th></tr></thead><tbody id="clientTableBody"></tbody></table></div>
+        </section>
+      </section>
+
+      <section id="client360View" class="view">
+        <button id="backToClients" class="back-button">← Volver a Clientes</button>
+        <section class="client-hero panel"><div><p class="eyebrow">CLIENTE 360° · <span id="client360Code"></span></p><h2 id="client360Name"></h2><span id="client360Badge" class="recurrence-badge"></span></div><div class="client-hero-stat"><span>Unidades netas</span><strong id="client360Units"></strong></div></section>
+        <section class="kpi-grid client360-kpis"><article class="kpi-card"><span class="kpi-label">Participación</span><strong id="client360Share"></strong><small>Sobre unidades netas filtradas</small></article><article class="kpi-card"><span class="kpi-label">Meses con compra</span><strong id="client360Months"></strong><small>Con saldo mensual positivo</small></article><article class="kpi-card"><span class="kpi-label">Boxes comprados</span><strong id="client360Products"></strong><small>Códigos con saldo positivo</small></article><article class="kpi-card"><span class="kpi-label">Última compra</span><strong id="client360Last" class="date-kpi"></strong><small>Último mes registrado con compra</small></article></section>
+        <section class="clients-grid client360-grid"><article class="panel"><div class="panel-head"><div><p class="eyebrow">TENDENCIA</p><h2>Evolución mensual</h2></div></div><div id="client360Monthly" class="monthly-chart"></div></article><article class="panel"><div class="panel-head"><div><p class="eyebrow">MIX</p><h2>Boxes comprados</h2></div></div><div id="client360Mix" class="ranking"></div></article></section>
+        <section class="panel detail-panel"><div class="panel-head"><div><p class="eyebrow">HISTORIAL</p><h2>Movimientos del cliente</h2></div><span id="client360MovementCount" class="count-pill"></span></div><div class="table-wrap"><table><thead><tr><th>Período</th><th>Código</th><th>Nombre vigente del box</th><th class="numeric">Cantidad</th></tr></thead><tbody id="client360History"></tbody></table></div></section>
+      </section>
+
+      <section id="portfolioView" class="view">
+        <section class="kpi-grid" aria-label="Indicadores de portfolio">
+          <article class="kpi-card accent"><span class="kpi-label">Boxes con ventas</span><strong id="portfolioKpiSold">—</strong><small>Códigos con saldo neto positivo</small></article>
+          <article class="kpi-card"><span class="kpi-label">Unidades netas</span><strong id="portfolioKpiUnits">—</strong><small>Notas de crédito descontadas</small></article>
+          <article class="kpi-card"><span class="kpi-label">Clientes compradores</span><strong id="portfolioKpiClients">—</strong><small>Clientes con saldo neto positivo</small></article>
+          <article class="kpi-card warning"><span class="kpi-label">Portfolio activo sin ventas</span><strong id="portfolioKpiNoSales">—</strong><small>Productos vigentes sin saldo positivo</small></article>
+        </section>
+        <section class="portfolio-grid">
+          <article class="panel portfolio-ranking-card"><div class="panel-head"><div><p class="eyebrow">DESEMPEÑO</p><h2>Ranking de Boxes</h2></div><span class="muted">unidades netas</span></div><div id="portfolioRanking" class="portfolio-bars"></div><button id="togglePortfolioRanking" class="chart-toggle" type="button">Ver todos los boxes</button></article>
+          <article class="panel portfolio-coverage-card"><div class="panel-head"><div><p class="eyebrow">COBERTURA DEL PORTFOLIO</p><h2>Cantidad de clientes compradores por Box</h2></div></div><div id="portfolioCoverage" class="coverage-list"></div><button id="togglePortfolioCoverage" class="chart-toggle" type="button">Ver todos</button></article>
+        </section>
+        <section class="panel portfolio-status-panel"><div class="panel-head"><div><p class="eyebrow">VIGENCIA</p><h2>Estado del Portfolio</h2></div></div><div id="portfolioStatus" class="status-summary"></div></section>
+        <section class="panel detail-panel portfolio-table-panel"><div class="panel-head"><div><p class="eyebrow">DETALLE</p><h2>Portfolio</h2></div><span id="portfolioTableCount" class="count-pill"></span></div><div class="table-wrap"><table class="portfolio-table"><thead><tr><th><button data-product-sort="code">Código</button></th><th><button data-product-sort="name">Nombre vigente</button></th><th><button data-product-sort="status">Estado</button></th><th class="numeric"><button data-product-sort="net">Unidades netas</button></th><th class="numeric"><button data-product-sort="clients">Clientes compradores</button></th><th class="numeric"><button data-product-sort="share">Participación</button></th><th><button data-product-sort="lastPeriod">Última venta</button></th><th><span class="sr-only">Ver detalle</span></th></tr></thead><tbody id="portfolioTableBody"></tbody></table></div></section>
+      </section>
+
+      <section id="box360View" class="view">
+        <button id="backToPortfolio" class="back-button">← Volver a Portfolio</button>
+        <section class="client-hero box-hero panel"><div><p class="eyebrow">BOX 360° · <span id="box360Code"></span></p><h2 id="box360Name"></h2><span id="box360Status" class="portfolio-status"></span></div><div class="client-hero-stat"><span>Última venta</span><strong id="box360Last" class="date-kpi"></strong></div></section>
+        <section class="kpi-grid"><article class="kpi-card accent"><span class="kpi-label">Unidades netas</span><strong id="box360Units">—</strong><small>Saldo del contexto seleccionado</small></article><article class="kpi-card"><span class="kpi-label">Clientes compradores</span><strong id="box360Clients">—</strong><small>Con saldo neto positivo</small></article><article class="kpi-card"><span class="kpi-label">Participación</span><strong id="box360Share">—</strong><small>Sobre Special Edition del contexto</small></article><article class="kpi-card"><span class="kpi-label">Meses con venta</span><strong id="box360Months">—</strong><small>Meses con saldo neto positivo</small></article></section>
+        <section class="portfolio-grid box360-grid"><article class="panel"><div class="panel-head"><div><p class="eyebrow">TENDENCIA</p><h2>Evolución mensual</h2></div></div><div id="box360Monthly" class="monthly-chart"></div></article><article class="panel concentration-card"><div><p class="eyebrow">CONCENTRACIÓN</p><h2>Dependencia principal</h2></div><div id="box360Gauge" class="gauge"><div><strong id="box360Top3">—</strong><span>cliente principal</span></div></div><div class="dependency-detail"><strong id="box360PrincipalName">—</strong><span id="box360PrincipalUnits">—</span><small>Año y período seleccionados · todos los clientes</small></div><p id="box360ConcentrationText" class="insight"></p></article></section>
+        <section class="panel box-buyers-panel"><div class="panel-head"><div><p class="eyebrow">ALCANCE</p><h2>Clientes compradores</h2></div><span class="muted">participación dentro del box</span></div><div id="box360Buyers" class="ranking"></div></section>
+      </section>
+
+      <section id="opportunitiesView" class="view">
+        <section class="opportunity-context panel"><div><p class="eyebrow">CRITERIO TEMPORAL</p><strong id="opportunityContext">—</strong><small>Período y Box no modifican estas reglas: se analiza la historia completa del año seleccionado.</small><small id="opportunityCancelledInfo"></small></div><label>Tipo de oportunidad<select id="opportunityTypeFilter"><option value="">Todas las oportunidades</option><option value="Reactivar">Reactivar</option><option value="Convertir en recurrente">Convertir en recurrente</option><option value="Ampliar portfolio">Ampliar portfolio</option><option value="Activar Box">Activar Box</option><option value="Venta neta anulada">Venta neta anulada</option></select></label></section>
+        <section class="kpi-grid" aria-label="Indicadores de oportunidades">
+          <button class="kpi-card accent opportunity-kpi" data-opportunity-type="Reactivar" type="button"><span class="kpi-label">Clientes para reactivar</span><strong id="opportunityKpiReactivate">—</strong><small>2+ meses completos sin compra</small></button>
+          <button class="kpi-card opportunity-kpi" data-opportunity-type="Convertir en recurrente" type="button"><span class="kpi-label">Compradores de una sola vez</span><strong id="opportunityKpiOneTime">—</strong><small>Compra positiva en exactamente un mes</small></button>
+          <button class="kpi-card opportunity-kpi" data-opportunity-type="Ampliar portfolio" type="button"><span class="kpi-label">Clientes para ampliar mix</span><strong id="opportunityKpiExpand">—</strong><small>Recurrentes con menos de 3 códigos</small></button>
+          <button class="kpi-card opportunity-kpi" data-opportunity-type="Activar Box" type="button"><span class="kpi-label">Boxes activos sin ventas</span><strong id="opportunityKpiActivate">—</strong><small>Catálogo vigente sin saldo positivo</small></button>
+        </section>
+        <section class="panel detail-panel opportunity-table-panel"><div class="panel-head"><div><p class="eyebrow">ACCIÓN COMERCIAL</p><h2>Prioridades comerciales</h2></div><span id="opportunityTableCount" class="count-pill"></span></div><div class="table-wrap"><table class="opportunity-table"><thead><tr><th>Prioridad</th><th>Cliente / Box</th><th>Tipo de oportunidad</th><th>Evidencia</th><th>Acción sugerida</th></tr></thead><tbody id="opportunityTableBody"></tbody></table></div><div id="opportunityEmpty" class="empty-state" hidden>No hay oportunidades para los filtros seleccionados.</div></section>
+      </section>
+
+      <section id="comingView" class="view"><div class="panel coming-soon"><span>◇</span><p class="eyebrow">SIGUIENTE ETAPA</p><h2 id="comingTitle">Próximamente</h2><p>Esta sección está preparada en la navegación y se desarrollará después de validar Clientes.</p><button class="back-button" data-view="home">Volver a Inicio</button></div></section>
+      <footer>Special Edition Boxes Dashboard · V1.0 <span>Datos locales normalizados desde Google Sheets</span></footer>
+    </main>
+  </div>
+  <script defer src="assets/js/app.bundle.js?v=20260826-1"></script>
+</body>
+</html>

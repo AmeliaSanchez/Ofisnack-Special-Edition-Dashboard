@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-bundle.mjs",
+    "test": "node scripts/validate-regression.mjs && node scripts/test-data-loader.mjs",
+    "test:initial": "node scripts/validate-regression.mjs --expect-initial-snapshot",
+    "sync:fixture": "node scripts/sync-google-sheet.mjs --fixture --expect-initial-snapshot",
+    "sync": "node scripts/sync-google-sheet.mjs"
+  }
+}
