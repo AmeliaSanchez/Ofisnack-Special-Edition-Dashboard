@@ -367,6 +367,54 @@
       "productCode": "IA0012",
       "historicalName": "Box Ofisnack Wellness x 12 productos",
       "quantity": 2
+    },
+    {
+      "period": "2026-09",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0007",
+      "historicalName": "Box Ofisnack Desayuno x 13 productos",
+      "quantity": 1
+    },
+    {
+      "period": "2026-09",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0008",
+      "historicalName": "Box Ofisnack After Office x 12 productos",
+      "quantity": 1
+    },
+    {
+      "period": "2026-09",
+      "clientCode": "05640",
+      "clientName": "Prominente S.A.",
+      "productCode": "IA0019",
+      "historicalName": "Box Ofisnack Cine en Casa x 20 productos",
+      "quantity": 3
+    },
+    {
+      "period": "2026-09",
+      "clientCode": "01528",
+      "clientName": "Jones Lang Lasalle S.R.L.",
+      "productCode": "IA0020",
+      "historicalName": "Box Ofisnack Sala de Reuniones x 20 Bocaditos",
+      "quantity": 1
+    },
+    {
+      "period": "2026-09",
+      "clientCode": "16601",
+      "clientName": "We Work Argentina SRL",
+      "productCode": "IA0020",
+      "historicalName": "Box Ofisnack Sala de Reuniones x 20 Bocaditos",
+      "quantity": 3
+    },
+    {
+      "period": "2026-09",
+      "clientCode": "36289",
+      "clientName": "Media Monks Bs As SRL",
+      "productCode": "IA0021",
+      "historicalName": "Box Ofisnack Sweets x 120 Caramelos",
+      "quantity": 3
     }
   ],
   "catalog": [
@@ -461,5 +509,5 @@
     "ultimoMesCerrado": "2026-07",
     "versionEsquema": 1
   },
-  "generatedAt": "2026-08-26T13:15:06.381Z"
+  "generatedAt": "2026-10-02T13:32:05.096Z"
 }
